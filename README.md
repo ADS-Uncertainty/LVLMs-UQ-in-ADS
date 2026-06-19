@@ -2,6 +2,7 @@
 ## Preliminary Experiment I: Effect of Input Format (Six-View Concatenation vs. Per-Image Inputs) on LVLM Performance
 
 
+https://github.com/ADS-Uncertainty/LVLMs-UQ-in-ADS/blob/6609e63efac7ad3c7a47d35519d0983050f51c68/6vs1.png
 
 
 
