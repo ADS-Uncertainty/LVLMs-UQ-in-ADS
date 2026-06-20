@@ -1,9 +1,8 @@
 # Quantifying Prediction Uncertainty of Large Vision-Language Models for Autonomous Driving: An Empirical Study
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ADS-Uncertainty/LVLMs-UQ-in-ADS/124c4490f3bf27045e330a939390968d9adf3552/Image/overview-Github.png" width="900">
+  <img src="https://raw.githubusercontent.com/ADS-Uncertainty/LVLMs-UQ-in-ADS/124c4490f3bf27045e330a939390968d9adf3552/Image/overview-Github.png" width="1200">
 </p>
-https://github.com/ADS-Uncertainty/LVLMs-UQ-in-ADS/blob/124c4490f3bf27045e330a939390968d9adf3552/Image/overview-Github.png
 
 
 
