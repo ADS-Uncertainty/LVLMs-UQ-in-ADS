@@ -16,9 +16,10 @@ The artifact includes:
 4. Scripts to compute evaluation metrics reported in the paper based on the raw experimental results.
 5. The final experimental results, which can be used to directly reproduce the uncertainty quantification results and other findings presented in the study.
 
-## NuplanQA-UQ
+## NuplanQA-UQ dataset
 The NuplanQA-UQ dataset (1.8G) can be downloaded from:
 https://pan.baidu.com/s/1Oj9lRicESIz5xqys8e_rag
+
 Access code: 97yf
 
 ## Preliminary Experiment-I: Effect of Input Format (Six-View Concatenation vs. Per-Image Inputs) on LVLM Performance
