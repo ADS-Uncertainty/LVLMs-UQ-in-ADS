@@ -1,7 +1,11 @@
 # Quantifying Prediction Uncertainty of Large Vision-Language Models for Autonomous Driving: An Empirical Study
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/ADS-Uncertainty/LVLMs-UQ-in-ADS/124c4490f3bf27045e330a939390968d9adf3552/Image/overview-Github.png" width="1200">
 </p>
+
+## Abstract
+Large Vision-Language Models (LVLMs) have demonstrated strong potential in Autonomous Driving Systems (ADS). However, their inherent uncertainty raises concerns regarding safety during real-world deployment. Studies on LVLM uncertainty quantification mostly focus on simple vision-language tasks by assuming ideal and unperturbed visual conditions. Systematically quantifying uncertainty of LVLMs in performing ADS tasks largely remain unexplored. In this article, we present a very first empirical study that quantifies the prediction uncertainty of 10 open-source LVLMs across 8 ADS tasks, and evaluates their performance under 7 types of image corruptions. Results show that in ADS tasks, prediction uncertainty and prediction performance of LVLMs do not always align, and relying on a single metric for evaluation may overlook critical safety risks; snow and zoom blur have the greatest effect, leading to an average increase in prediction uncertainty of 11.1\% and 9.3\% per LVLM, respectively; image corruptions do not increase LVLMs’ prediction uncertainty across all ADS tasks, e.g., in traffic light perception, 90\% of LVLMs’ uncertainty paradoxically decreased; and within the same model family, LVLMs with larger parameter scales tend to exhibit lower prediction uncertainty and thus handle corruptions more robustly. We introduce the NuplanQA-UQ dataset to support further assessment of LVLM uncertainty in the context of ADS.
 
 
 ## Overview
@@ -17,12 +21,7 @@ The artifact includes:
 5. The final experimental results, which can be used to directly reproduce the uncertainty quantification results and other findings presented in the study.
 
 
-## Abstract
-Large Vision-Language Models (LVLMs) have demonstrated strong potential in Autonomous Driving Systems (ADS). However, their inherent uncertainty raises concerns regarding safety during real-world deployment. Studies on LVLM uncertainty quantification mostly focus on simple vision-language tasks by assuming ideal and unperturbed visual conditions. Systematically quantifying uncertainty of LVLMs in performing ADS tasks largely remain unexplored. In this article, we present a very first empirical study that quantifies the prediction uncertainty of 10 open-source LVLMs across 8 ADS tasks, and evaluates their performance under 7 types of image corruptions. Results show that in ADS tasks, prediction uncertainty and prediction performance of LVLMs do not always align, and relying on a single metric for evaluation may overlook critical safety risks; snow and zoom blur have the greatest effect, leading to an average increase in prediction uncertainty of 11.1\% and 9.3\% per LVLM, respectively; image corruptions do not increase LVLMs’ prediction uncertainty across all ADS tasks, e.g., in traffic light perception, 90\% of LVLMs’ uncertainty paradoxically decreased; and within the same model family, LVLMs with larger parameter scales tend to exhibit lower prediction uncertainty and thus handle corruptions more robustly. We introduce the NuplanQA-UQ dataset to support further assessment of LVLM uncertainty in the context of ADS.
-
-
-
-## NuplanQA-UQ dataset Collection
+📦 ## NuplanQA-UQ dataset Collection
 The NuplanQA-UQ dataset (1.8G) can be downloaded from:
 https://pan.baidu.com/s/1Oj9lRicESIz5xqys8e_rag
 
