@@ -27,7 +27,7 @@ https://pan.baidu.com/s/1Oj9lRicESIz5xqys8e_rag
 
 Access code: 97yf
 
-## Preliminary Experiment-I: Effect of Input Format (Six-View Concatenation vs. Per-Image Inputs) on LVLM Performance
+## 🧾 Preliminary Experiment-I: Effect of Input Format (Six-View Concatenation vs. Per-Image Inputs) on LVLM Performance
 - To investigate whether image input formats affect the prediction performance of different LVLMs, we conduct preliminary experiments on LVLMs with fewer than 10B parameters. Specifically, NuPlanQA-Eval consists of 8 ADS tasks, i.e., (1) traffic light perception, (2) road characteristics perception, (3) surrounding objects recognition, (4) key object recognition, (5) traffic flow recognition, (6) ego-centric situation assessment, (7) ego-centric action recommendation, and (8) ego vehicle (EV) maneuver reasoning, each containing approximately 200 samples. We randomly sample 5 instances from each task to construct a validation subset, resulting in a total of 40 samples (8 tasks × 5 samples). On this subset, we evaluate different image input formats, including six-view concatenation and per-image multiple-input settings, and report the prediction accuracy of LVLMs. All experiments are conducted under the clean condition with a sampling size of five. The experimental results are shown in the figure below.
 
 <p align="center">
@@ -38,7 +38,7 @@ Access code: 97yf
 
 
 
-## Preliminary Experiment-II: Effect of Sampling Size (5 vs. 10 samples) on LVLM Performance and Uncertainty
+## 🧾 Preliminary Experiment-II: Effect of Sampling Size (5 vs. 10 samples) on LVLM Performance and Uncertainty
 - To evaluate how the number of sampling runs affects the experimental results of LVLMs, we conduct preliminary experiments on a validation subset of 40 samples from NuPlanQA-Eval (see Preliminary Experiment I). Specifically, we perform 5 sampling runs (ours) and 10 sampling runs for each LVLM, and report the corresponding results below.
 
 <p align="center">
