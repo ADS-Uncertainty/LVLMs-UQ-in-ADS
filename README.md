@@ -28,13 +28,13 @@ https://pan.baidu.com/s/1Oj9lRicESIz5xqys8e_rag
 Access code: 97yf
 
 ## Preliminary Experiment-I: Effect of Input Format (Six-View Concatenation vs. Per-Image Inputs) on LVLM Performance
-To investigate whether image input formats affect the prediction performance of different LVLMs, we conduct preliminary experiments on LVLMs with fewer than 10B parameters. Specifically, NuPlanQA-Eval consists of 8 ADS tasks, i.e., (1) traffic light perception, (2) road characteristics perception, (3) surrounding objects recognition, (4) key object recognition, (5) traffic flow recognition, (6) ego-centric situation assessment, (7) ego-centric action recommendation, and (8) ego vehicle (EV) maneuver reasoning, each containing approximately 200 samples. We randomly sample 5 instances from each task to construct a validation subset, resulting in a total of 40 samples (8 tasks × 5 samples). On this subset, we evaluate different image input formats, including six-view concatenation and per-image multiple-input settings, and report the prediction accuracy of LVLMs. All experiments are conducted under the clean condition with a sampling size of five.
+To investigate whether image input formats affect the prediction performance of different LVLMs, we conduct preliminary experiments on LVLMs with fewer than 10B parameters. Specifically, NuPlanQA-Eval consists of 8 ADS tasks, i.e., (1) traffic light perception, (2) road characteristics perception, (3) surrounding objects recognition, (4) key object recognition, (5) traffic flow recognition, (6) ego-centric situation assessment, (7) ego-centric action recommendation, and (8) ego vehicle (EV) maneuver reasoning, each containing approximately 200 samples. We randomly sample 5 instances from each task to construct a validation subset, resulting in a total of 40 samples (8 tasks × 5 samples). On this subset, we evaluate different image input formats, including six-view concatenation and per-image multiple-input settings, and report the prediction accuracy of LVLMs. All experiments are conducted under the clean condition with a sampling size of five. The experimental results are shown in the figure below.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ADS-Uncertainty/LVLMs-UQ-in-ADS/dbb15f1c95f23afa2e90856f205f8b54dfb81dd0/Image/6vs1.png" width="700">
 </p>
 
-
+- It can be observed that the prediction accuracy of LVLMs does not exhibit significant variation across different image input formats, and the overall trends remain largely consistent. Given the limited size of the subset (40 samples), we conclude that the impact of input format on both LVLM prediction accuracy and uncertainty is negligible. Therefore, the performance differences among LVLMs are primarily attributed to their intrinsic model capabilities or the scope of their pretraining data, rather than the input format.
 
 
 
