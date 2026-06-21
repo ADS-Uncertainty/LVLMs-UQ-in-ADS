@@ -21,7 +21,7 @@ The artifact includes:
 5. The final experimental results, which can be used to directly reproduce the uncertainty quantification results and other findings presented in the study.
 
 
-📦 ## NuplanQA-UQ dataset Collection
+## 📦 NuplanQA-UQ dataset Collection
 The NuplanQA-UQ dataset (1.8G) can be downloaded from:
 https://pan.baidu.com/s/1Oj9lRicESIz5xqys8e_rag
 
