@@ -41,5 +41,8 @@ Access code: 97yf
 ## Preliminary Experiment-II: Effect of Sampling Size (5 vs. 10 samples) on LVLM Performance and Uncertainty
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ADS-Uncertainty/LVLMs-UQ-in-ADS/f2c9c99a19b850fb6a8559539de985a0aca03ddb/Image/sampling.png" width="800">
+  <img src="https://raw.githubusercontent.com/ADS-Uncertainty/LVLMs-UQ-in-ADS/5b12ca204ebd16ef63325a7594288d6910b79729/Image/5%20vs%2010%20Samples.png" width="800">
 </p>
+
+
+
