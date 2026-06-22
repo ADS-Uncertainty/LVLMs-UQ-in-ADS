@@ -9,9 +9,10 @@ Large Vision-Language Models (LVLMs) have demonstrated strong potential in Auton
 
 
 ## Overview
-This repository contains the code, experimental results, and scripts required to reproduce the findings of our article, *Quantifying Prediction Uncertainty of Large Vision-Language Models for Autonomous Driving: An Empirical Study*. Additionally, we provide preliminary results on the impact of input format (six-view image concatenation versus individual image inputs) on LVLM performance.
+- This repository contains the code, experimental results, and scripts required to reproduce the findings of our article, *Quantifying Prediction Uncertainty of Large Vision-Language Models for Autonomous Driving: An Empirical Study*.
+- Additionally, we provide preliminary results on the impact of input format (six-view image concatenation versus individual image inputs) on LVLM performance.
 
-The artifact includes:
+- The artifact includes:
 1. Dataset: NuplanQA-UQ
 2. Scripts to download the NuPlan and NuPlanQA-Eval datasets.
 3. Code to perform predictions using the 10 open-source LVLMs employed in the study, and to obtain the raw experimental outputs.
