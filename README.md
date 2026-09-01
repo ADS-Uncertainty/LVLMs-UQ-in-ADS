@@ -32,3 +32,13 @@ The NuplanQA-UQ dataset (1.8G) can be downloaded from: https://doi.org/10.5281/z
 
 - It can be observed that the prediction accuracy of LVLMs does not exhibit significant variation across different image input formats, and the overall trends remain largely consistent. Given the limited size of the subset (40 samples), we conclude that the impact of input format on both LVLM prediction accuracy and uncertainty is negligible. Therefore, the performance differences among LVLMs are primarily attributed to their intrinsic model capabilities or the scope of their pretraining data, rather than the input format.
 
+## 🧾 Preliminary Experiment-II: Effect of Sampling Size (5 vs. 10 samples) on LVLM Performance and Uncertainty
+- To evaluate how the number of sampling runs affects the experimental results of LVLMs, we conduct preliminary experiments on a validation subset of 40 samples from NuPlanQA-Eval (see Preliminary Experiment I). Specifically, we perform 5 sampling runs (ours) and 10 sampling runs for each LVLM, and report the corresponding results below.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ADS-Uncertainty/LVLMs-UQ-in-ADS/5b12ca204ebd16ef63325a7594288d6910b79729/Image/5%20vs%2010%20Samples.png" width="800">
+</p>
+
+- From Table, it can be observed that under 10 sampling runs, the average prediction accuracy of LVLMs remains almost identical to that under 5 sampling runs. The prediction uncertainty shows a slight increase when increasing the number of sampling runs from 5 to 10. Considering that the uncertainty values lie within the range [0, 1.922), the average increase of 7.2% is reasonable, as a larger number of samples is more likely to introduce additional response diversity, especially under image corruptions.
+- Overall, the ranking of LVLMs in terms of both prediction performance and uncertainty remains highly consistent with that reported in our main paper. For instance, InternVL-3-8B still achieves the best performance with the lowest uncertainty, while Deepseek-VL2-3B remains the worst-performing model. This further validates the reliability of our experimental findings.
+- We recommend using a larger number of sampling runs for uncertainty quantification of LVLMs when computational resources permit, as it generally leads to more reliable uncertainty estimation.
