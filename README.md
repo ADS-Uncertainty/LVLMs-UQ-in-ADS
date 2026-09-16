@@ -55,7 +55,5 @@ The prompt provides additional information extracted from your vehicle, sampled 
 
 [1] R. Zhang, H. Zhang, and Z. Zheng, “Vl-uncertainty: Detecting hallucination in large vision-language model via uncertainty estimation,” 2024,
 arXiv:2411.11919.
-
 [2] A. Vazhentsev, E. Fadeeva, R. Xing, et al., “Unconditional Truthfulness: Learning Unconditional Uncertainty of Large Language Models,” Proc. EMNLP, pp. 35673–35694, 2025.
-
 [3] X. Feng, H. Yu, M. Wu, et al., “NarrLV: Towards a Comprehensive Narrative-Centric Evaluation for Long Video Generation,” Proc. ICLR, 2026.
