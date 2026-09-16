@@ -24,7 +24,7 @@ Large Vision-Language Models (LVLMs) have demonstrated strong potential in Auton
 The NuplanQA-UQ dataset (1.8G) can be downloaded from: https://doi.org/10.5281/zenodo.22643782
 
 ## 🧾 Experimental Setup: Prompt Design and Result Collection
-- For the evaluation of all LVLMs, we followed the experimental protocol of NuplanQA-Eval and used the same system prompt for all models during inference to ensure a consistent evaluation setting. The complete system prompt is provided below:
+- For the evaluation of all LVLMs, we followed the experimental protocol of **NuplanQA-Eval** and used the same system prompt for all models during inference to ensure a consistent evaluation setting. The complete system prompt is provided below:
 
 
     - [System Prompt] You are driving from inside the vehicle cabin. The image shows six views from the ego vehicle, arranged in two rows from left to right: front left, front, and front right on the top row; back right, back, and back left on the bottom row.
