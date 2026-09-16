@@ -43,7 +43,7 @@ The prompt provides additional information extracted from your vehicle, sampled 
 - It can be observed that the prediction accuracy of LVLMs does not exhibit significant variation across different image input formats, and the overall trends remain largely consistent. Given the limited size of the subset (40 samples), we conclude that the impact of input format on both LVLM prediction accuracy and uncertainty is negligible. Therefore, the performance differences among LVLMs are primarily attributed to their intrinsic model capabilities or the scope of their pretraining data, rather than the input format.
 
 ## 🧾 Preliminary Experiment-II: Effect of Sampling Size (5 vs. 10 samples) on LVLM Performance and Uncertainty
-- **Because repeated stochastic inference with LVLMs is computationally expensive**, particularly for models with **more than 7 billion parameters**, a large number of runs per input (e.g., more than ten) is impractical on large-scale test sets. In our study, **following [1]**, we generated five independent predictions for each input to compute Shannon-entropy for uncertainty quantification, which is a setting commonly adopted in the evaluation of LLMs and LVLMs and provides a practical trade-off between computational feasibility and reliable characterization of output variability [2-3]. In total, 633,600 predictions were performed (10 LVLMs × 8 visual conditions × 1,584 inputs × 5 runs).
+- **Because repeated stochastic inference with LVLMs is computationally expensive**, particularly for models with **more than 7 billion parameters**, a large number of runs per input (e.g., more than ten) is impractical on large-scale test sets. In our study, **following [1]**, we generated five independent predictions for each input to compute Shannon-entropy for uncertainty quantification, which is a setting commonly adopted in the evaluation of LLMs and LVLMs and provides a practical trade-off between computational feasibility and reliable characterization of output variability [2]. In total, 633,600 predictions were performed (10 LVLMs × 8 visual conditions × 1,584 inputs × 5 runs).
 - To evaluate how the number of sampling runs affected the experimental results, we conducted a supplementary sensitivity experiment on a validation subset of 40 samples from NuPlanQA-Eval (see Preliminary Experiment I). Specifically, we compared the results obtained using five and ten independent sampling runs for eight representative LVLMs, as reported below.
 
 <p align="center">
@@ -59,5 +59,3 @@ The prompt provides additional information extracted from your vehicle, sampled 
 arXiv:2411.11919.
 
 [2] A. Vazhentsev, E. Fadeeva, R. Xing, et al., “Unconditional Truthfulness: Learning Unconditional Uncertainty of Large Language Models,” Proc. EMNLP, pp. 35673–35694, 2025.
-
-[3] X. Feng, H. Yu, M. Wu, et al., “NarrLV: Towards a Comprehensive Narrative-Centric Evaluation for Long Video Generation,” Proc. ICLR, 2026.
