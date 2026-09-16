@@ -53,7 +53,7 @@ The prompt provides additional information extracted from your vehicle, sampled 
 - From Table, it can be observed that under 10 sampling runs, the average prediction accuracy of LVLMs remains almost identical to that under 5 sampling runs.
 - The prediction uncertainty shows a slight increase when increasing the number of sampling runs from 5 to 10. This slight variation is reasonable, as a larger number of samples may introduce additional response diversity, especially under image corruptions. Moreover, **the ranking of LVLMs in terms of both prediction performance and uncertainty remains highly consistent with that reported in our main paper**. For instance, InternVL-3-8B still achieves the best performance with the lowest uncertainty, while Deepseek-VL2-3B remains the worst-performing model. These preliminary results suggest that 5 sampling runs are sufficient to support the aggregate model comparisons and ranking-based conclusions reported in our study.
 
-[1] R. Zhang, H. Zhang, and Z. Zheng, “Vl-uncertainty: Detecting hallucination in large vision-language model via uncertainty estimation,” 2024,
+- [1] R. Zhang, H. Zhang, and Z. Zheng, “Vl-uncertainty: Detecting hallucination in large vision-language model via uncertainty estimation,” 2024,
 arXiv:2411.11919.
-[2] A. Vazhentsev, E. Fadeeva, R. Xing, et al., “Unconditional Truthfulness: Learning Unconditional Uncertainty of Large Language Models,” Proc. EMNLP, pp. 35673–35694, 2025.
-[3] X. Feng, H. Yu, M. Wu, et al., “NarrLV: Towards a Comprehensive Narrative-Centric Evaluation for Long Video Generation,” Proc. ICLR, 2026.
+- [2] A. Vazhentsev, E. Fadeeva, R. Xing, et al., “Unconditional Truthfulness: Learning Unconditional Uncertainty of Large Language Models,” Proc. EMNLP, pp. 35673–35694, 2025.
+- [3] X. Feng, H. Yu, M. Wu, et al., “NarrLV: Towards a Comprehensive Narrative-Centric Evaluation for Long Video Generation,” Proc. ICLR, 2026.
