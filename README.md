@@ -40,22 +40,23 @@ The prompt provides additional information extracted from your vehicle, sampled 
   <img src="https://raw.githubusercontent.com/ADS-Uncertainty/LVLMs-UQ-in-ADS/dbb15f1c95f23afa2e90856f205f8b54dfb81dd0/Image/6vs1.png" width="700">
 </p>
 
-- It can be observed that the prediction accuracy of LVLMs does not exhibit significant variation across different image input formats, and the overall trends remain largely consistent. Given the limited size of the subset (40 samples), we conclude that the impact of input format on both LVLM prediction accuracy and uncertainty is negligible. Therefore, the performance differences among LVLMs are primarily attributed to their intrinsic model capabilities or the scope of their pretraining data, rather than the input format.
+- As shown in the figure, although some model-specific differences in prediction accuracy were observed, the overall performance trends and relative rankings of the LVLMs remained broadly consistent across the two input formats. Given the limited subset of 40 samples, these results provide preliminary evidence that input format is unlikely to be the primary factor driving cross-model performance differences.
 
-## 🧾 Preliminary Experiment-II: Effect of Sampling Size (5 vs. 10 samples) on LVLM Performance and Uncertainty
-- **Because repeated stochastic inference with LVLMs is computationally expensive**, particularly for models with **more than 7 billion parameters**, a large number of runs per input (e.g., more than ten) is impractical on large-scale test sets. In our study, **following [1]**, we generated five independent predictions for each input to compute Shannon-entropy for uncertainty quantification, which is a setting commonly adopted in the evaluation of LLMs and LVLMs and provides a practical trade-off between computational feasibility and reliable characterization of output variability [2]. In total, 633,600 predictions were performed (10 LVLMs × 8 visual conditions × 1,584 inputs × 5 runs).
+
+## 🧾 Preliminary Experiment-II: Effect of Sampling Size (five vs. ten samples) on LVLM Performance and Uncertainty
+- **Because repeated stochastic inference with LVLMs is computationally expensive**, particularly for models with **more than 7 billion parameters**, a large number of runs per input (e.g., more than ten) is impractical on large-scale test sets. In our study, **following [1]**, we generated five independent predictions for each input to compute Shannon entropy for uncertainty quantification, which is a setting commonly adopted in the evaluation of LLMs and LVLMs and provides a practical trade-off between computational feasibility and reliable characterization of output variability [2]. In total, 633,600 predictions were performed (10 LVLMs × 8 visual conditions × 1,584 inputs × 5 runs).
 - To evaluate how the number of sampling runs affected the experimental results, we conducted a supplementary sensitivity experiment on a validation subset of 40 samples from NuPlanQA-Eval (see Preliminary Experiment I). Specifically, we compared the results obtained using five and ten independent sampling runs for eight representative LVLMs, as reported below.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ADS-Uncertainty/LVLMs-UQ-in-ADS/5b12ca204ebd16ef63325a7594288d6910b79729/Image/5%20vs%2010%20Samples.png" width="800">
 </p>
 
-- From Table, it can be observed that under 10 sampling runs, the average prediction accuracy of LVLMs remains almost identical to that under 5 sampling runs.
-- The prediction uncertainty shows a slight increase when increasing the number of sampling runs from 5 to 10. This slight variation is reasonable, as a larger number of samples may introduce additional response diversity, especially under image corruptions. Moreover, **the ranking of LVLMs in terms of both prediction performance and uncertainty remains highly consistent with that reported in our main paper**. For instance, InternVL-3-8B still achieves the best performance with the lowest uncertainty, while Deepseek-VL2-3B remains the worst-performing model. These preliminary results suggest that 5 sampling runs are sufficient to support the aggregate model comparisons and ranking-based conclusions reported in our study.
+- From Table, it can be observed that under ten sampling runs, the average prediction accuracy of LVLMs remains almost identical to that under five sampling runs.
+- The prediction uncertainty shows a slight increase when increasing the number of sampling runs from five to ten. This slight variation is reasonable, as a larger number of samples may introduce additional response diversity, especially under image corruptions. Moreover, **the ranking of LVLMs in terms of both prediction performance and uncertainty remains highly consistent with that reported in our main paper**. For instance, InternVL-3-8B still achieves the best performance with the lowest uncertainty, while Deepseek-VL2-3B remains the worst-performing model. These preliminary results suggest that five sampling runs are sufficient to support the aggregate model comparisons and ranking-based conclusions reported in our study.
 
 **References**
 
 [1] R. Zhang, H. Zhang, and Z. Zheng, “Vl-uncertainty: Detecting hallucination in large vision-language model via uncertainty estimation,” 2024,
 arXiv:2411.11919.
 
-[2] A. Vazhentsev, E. Fadeeva, R. Xing, et al., “Unconditional Truthfulness: Learning Unconditional Uncertainty of Large Language Models,” Proc. EMNLP, pp. 35673–35694, 2025.
+[2] A. Vazhentsev, E. Fadeeva, R. Xing, et al., “Unconditional Truthfulness: Learning Unconditional Uncertainty of Large Language Models,” in Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP), pp. 35673–35694, 2025.
