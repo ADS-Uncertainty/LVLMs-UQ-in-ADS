@@ -23,10 +23,11 @@ Large Vision-Language Models (LVLMs) have demonstrated strong potential in Auton
 ## 📦 NuplanQA-UQ dataset Collection
 The NuplanQA-UQ dataset (1.8G) can be downloaded from: https://doi.org/10.5281/zenodo.22643782
 
-## Experimental Setup: Prompt Design and Result Collection
-
-
-
+## 🧾 Experimental Setup: Prompt Design and Result Collection
+- For the evaluation of all LVLMs, we followed the experimental protocol of NuplanQA-Eval and used the same system prompt for all models during inference to ensure a consistent evaluation setting. The complete system prompt is provided below:
+- [System Prompt] You are driving from inside the vehicle cabin. The image shows six views from the ego vehicle, arranged in two rows from left to right: front left, front, and front right on the top row; back right, back, and back left on the bottom row.
+The prompt provides additional information extracted from your vehicle, sampled 5 times over the past 1.5 seconds. Use the changes in velocity and steering angle to determine whether the vehicle is slowing down, accelerating, turning, curving, changing lanes, or making adjustments. Note that negative steering angles indicate a right turn, while positive angles indicate a left turn.
+- Notably, **we appended the instruction “Provide the selected answer choice only.” to each user prompt**, for example, “What is the most appropriate maneuver given the current conditions? Provide the selected answer choice only.” This instruction was used to standardize the response format across different LVLMs and facilitate reliable extraction and evaluation of their predicted answers. Finally, **we manually verified the outputs of all evaluated LVLMs to ensure the correct collection and computation of the experimental results.**
 
 
 ## 🧾 Preliminary Experiment-I: Effect of Input Format (Six-View Concatenation vs. Per-Image Inputs) on LVLM Performance
@@ -39,7 +40,7 @@ The NuplanQA-UQ dataset (1.8G) can be downloaded from: https://doi.org/10.5281/z
 - It can be observed that the prediction accuracy of LVLMs does not exhibit significant variation across different image input formats, and the overall trends remain largely consistent. Given the limited size of the subset (40 samples), we conclude that the impact of input format on both LVLM prediction accuracy and uncertainty is negligible. Therefore, the performance differences among LVLMs are primarily attributed to their intrinsic model capabilities or the scope of their pretraining data, rather than the input format.
 
 ## 🧾 Preliminary Experiment-II: Effect of Sampling Size (5 vs. 10 samples) on LVLM Performance and Uncertainty
-- Because repeated stochastic inference with LVLMs is computationally expensive, particularly for models with more than 7 billion parameters, a large number of runs per input (e.g., ten runs) is impractical on large-scale test sets. In our study, following the method adopted in [1], we generated five independent predictions for each input to compute cross-entropy for uncertainty quantification, which is a setting commonly adopted in the evaluation of LLMs and LVLMs and provides a practical trade-off between computational feasibility and reliable characterization of output variability. In total, 633,600 predictions were performed (10 LVLMs × 8 visual conditions × 1,584 inputs × 5 runs).
+- **Because repeated stochastic inference with LVLMs is computationally expensive**, particularly for models with **more than 7 billion parameters**, a large number of runs per input (e.g., ten runs) is impractical on large-scale test sets. In our study, **following the method adopted in [1]**, we generated five independent predictions for each input to compute cross-entropy for uncertainty quantification, which is a setting commonly adopted in the evaluation of LLMs and LVLMs and provides a practical trade-off between computational feasibility and reliable characterization of output variability. In total, 633,600 predictions were performed (10 LVLMs × 8 visual conditions × 1,584 inputs × 5 runs).
 - To evaluate how the number of sampling runs affected the experimental results, we conducted a supplementary sensitivity experiment on a validation subset of 40 samples from NuPlanQA-Eval (see Preliminary Experiment I). Specifically, we compared the results obtained using five and ten independent sampling runs for each LVLM, as reported below.
 
 <p align="center">
@@ -47,6 +48,6 @@ The NuplanQA-UQ dataset (1.8G) can be downloaded from: https://doi.org/10.5281/z
 </p>
 
 - From Table, it can be observed that under 10 sampling runs, the average prediction accuracy of LVLMs remains almost identical to that under 5 sampling runs.
-- The prediction uncertainty shows a slight increase when increasing the number of sampling runs from 5 to 10. Considering that the uncertainty values lie within the range [0, 1.922), the average increase of 7.2% is reasonable, as a larger number of samples is more likely to introduce additional response diversity, especially under image corruptions. Moreover, the ranking of LVLMs in terms of both prediction performance and uncertainty remains highly consistent with that reported in our main paper. For instance, InternVL-3-8B still achieves the best performance with the lowest uncertainty, while Deepseek-VL2-3B remains the worst-performing model. These results support the reliability of our experimental findings.
+- The prediction uncertainty shows a slight increase when increasing the number of sampling runs from 5 to 10. Considering that the uncertainty values lie within the range [0, 1.922), the average increase of 7.2% is reasonable, as a larger number of samples is more likely to introduce additional response diversity, especially under image corruptions. Moreover, **the ranking of LVLMs in terms of both prediction performance and uncertainty remains highly consistent with that reported in our main paper**. For instance, InternVL-3-8B still achieves the best performance with the lowest uncertainty, while Deepseek-VL2-3B remains the worst-performing model. These results support the reliability of our experimental findings.
 - [1] R. Zhang, H. Zhang, and Z. Zheng, “Vl-uncertainty: Detecting hallucination in large vision-language model via uncertainty estimation,” 2024,
 arXiv:2411.11919.
