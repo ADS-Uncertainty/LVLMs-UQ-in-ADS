@@ -51,7 +51,7 @@ The prompt provides additional information extracted from your vehicle, sampled 
 - To evaluate how the number of sampling runs affected the experimental results, we conducted a supplementary sensitivity experiment on a validation subset of 40 samples from NuPlanQA-Eval (see Preliminary Experiment I). Specifically, we compared the results obtained using five and ten independent sampling runs for eight representative LVLMs, as reported below.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ADS-Uncertainty/LVLMs-UQ-in-ADS/5b12ca204ebd16ef63325a7594288d6910b79729/Image/5%20vs%2010%20Samples.png" width="800">
+  <img src="https://raw.githubusercontent.com/ADS-Uncertainty/LVLMs-UQ-in-ADS/main/Image/5%20vs%2010%20Samples-new.png" width="800">
 </p>
 
 - As shown in the table, under ten sampling runs, the average prediction accuracy of LVLMs remains almost identical to that under five sampling runs.
