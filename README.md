@@ -16,18 +16,18 @@ Large Vision-Language Models (LVLMs) have demonstrated strong potential in Auton
 - Additionally, we provide preliminary results on the impact of input format (six-view image concatenation versus individual image inputs) on LVLM performance.
 
 - The artifact includes:
-1. Dataset: NuplanQA-UQ
-2. Scripts to download the NuPlan and NuPlanQA-Eval datasets.
+1. Dataset: NuPlanQA-UQ
+2. Scripts to download the nuPlan and NuPlanQA-Eval datasets.
 3. Code to perform predictions using the 10 open-source LVLMs employed in the study, and to obtain the raw experimental outputs.
 4. Scripts to compute evaluation metrics reported in the paper based on the raw experimental results.
 5. The final experimental results, which can be used to directly reproduce the uncertainty quantification results and other findings presented in the study.
 
 
-## 📦 NuplanQA-UQ dataset Collection
-The NuplanQA-UQ dataset (1.8G) can be downloaded from: https://doi.org/10.5281/zenodo.22643782
+## 📦 NuPlanQA-UQ dataset Collection
+The NuPlanQA-UQ dataset (1.8G) can be downloaded from: https://doi.org/10.5281/zenodo.22643782
 
 ## 🧾 Experimental Setup: Prompt Design and Result Collection
-- For the evaluation of all LVLMs, we followed the experimental protocol of **NuplanQA-Eval** and used the same system prompt for all models during inference to ensure a consistent evaluation setting. The complete system prompt is provided below:
+- For the evaluation of all LVLMs, we followed the experimental protocol of **NuPlanQA-Eval** and used the same system prompt for all models during inference to ensure a consistent evaluation setting. The complete system prompt is provided below:
 
 
     - [System Prompt] You are driving from inside the vehicle cabin. The image shows six views from the ego vehicle, arranged in two rows from left to right: front left, front, and front right on the top row; back right, back, and back left on the bottom row.
