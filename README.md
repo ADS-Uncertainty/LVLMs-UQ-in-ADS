@@ -41,7 +41,7 @@ The prompt provides additional information extracted from your vehicle, sampled 
 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ADS-Uncertainty/LVLMs-UQ-in-ADS/main/Image/6%20vs%201%20image.png" width="700">
+  <img src="https://raw.githubusercontent.com/ADS-Uncertainty/LVLMs-UQ-in-ADS/main/Image/6%20vs%201%20image.png" width="600">
 </p>
 
 - As shown in the figure, although some model-specific differences in prediction accuracy were observed, the overall performance trends and relative rankings of the LVLMs remained broadly consistent across the two input formats. Given the limited subset of 40 samples, these results provide preliminary evidence that input format is unlikely to be the primary factor driving cross-model performance differences.
