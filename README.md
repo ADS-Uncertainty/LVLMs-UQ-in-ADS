@@ -23,8 +23,8 @@ Large Vision-Language Models (LVLMs) have demonstrated strong potential in Auton
 5. The final experimental results, which can be used to directly reproduce the uncertainty quantification results and other findings presented in the study.
 
 
-## 📦 NuPlanQA-UQ dataset Collection
-The NuPlanQA-UQ dataset (1.8G) can be downloaded from: https://doi.org/10.5281/zenodo.22643782
+## 📦 NuPlanQA-UQ Dataset
+The NuPlanQA-UQ dataset (1.8 GB) can be downloaded from: https://doi.org/10.5281/zenodo.22643782
 
 ## 🧾 Experimental Setup: Prompt Design and Result Collection
 - For the evaluation of all LVLMs, we followed the experimental protocol of **NuPlanQA-Eval** and used the same system prompt for all models during inference to ensure a consistent evaluation setting. The complete system prompt is provided below:
@@ -37,7 +37,7 @@ The prompt provides additional information extracted from your vehicle, sampled 
 
 
 ## 🧾 Preliminary Experiment-I: Effect of Input Format (Six-View Concatenation vs. Per-Image Inputs) on LVLM Performance
-- To investigate whether image input formats affect the prediction performance of different LVLMs, we conducted preliminary experiments on LVLMs with fewer than 10B parameters. Specifically, NuPlanQA-Eval consists of 8 ADS tasks, i.e., (1) traffic light perception, (2) road characteristics perception, (3) surrounding object recognition, (4) key object recognition, (5) traffic flow recognition, (6) ego-centric situation assessment, (7) ego-centric action recommendation, and (8) ego vehicle (EV) maneuver reasoning, each containing approximately 200 samples. We randomly sampled 5 instances from each task to construct a validation subset, resulting in a total of 40 samples (8 tasks × 5 samples). On this subset, we evaluated different image input formats, including six-view concatenation and per-image multiple-input settings, and reported the prediction accuracy of LVLMs. All experiments were conducted under the clean condition with five sampling runs. The experimental results are shown in the figure below.
+- To investigate whether image input formats affect the prediction performance of different LVLMs, we conducted preliminary experiments on LVLMs with fewer than 10B parameters. Specifically, we selected 8 ADS tasks from NuPlanQA-Eval, excluding the Weather/Lighting Conditions task, i.e., (1) traffic light perception, (2) road characteristics perception, (3) surrounding object recognition, (4) key object recognition, (5) traffic flow recognition, (6) ego-centric situation assessment, (7) ego-centric action recommendation, and (8) ego vehicle (EV) maneuver reasoning, each containing approximately 200 samples. We randomly sampled 5 instances from each task to construct a validation subset, resulting in a total of 40 samples (8 tasks × 5 samples). On this subset, we evaluated different image input formats, including six-view concatenation and per-image multiple-input settings, and reported the prediction accuracy of LVLMs. All experiments were conducted under the clean condition with five sampling runs. The experimental results are shown in the figure below.
 
 
 <p align="center">
@@ -60,7 +60,6 @@ The prompt provides additional information extracted from your vehicle, sampled 
 
 **References**
 
-[1] R. Zhang, H. Zhang, and Z. Zheng, “Vl-uncertainty: Detecting hallucination in large vision-language model via uncertainty estimation,” 2024,
-arXiv:2411.11919.
+[1] R. Zhang, H. Zhang, and Z. Zheng, “VL-Uncertainty: Detecting Hallucination in Large Vision-Language Model via Uncertainty Estimation,” 2024, arXiv:2411.11919.
 
 [2] A. Vazhentsev, E. Fadeeva, R. Xing, et al., “Unconditional Truthfulness: Learning Unconditional Uncertainty of Large Language Models,” in Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP), pp. 35673–35694, 2025.
